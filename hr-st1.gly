@@ -11,4 +11,4 @@
 ++JSesh_page_direction LEFT_TO_RIGHT +s
 ++JSesh_max_quadrantHeight 18.0 +s
 ++JSesh_page_orientation HORIZONTAL +s
-L1:D21-G40-G1
+L1:D21-G40-G1-wp:p-t:(Z7-Z9)
