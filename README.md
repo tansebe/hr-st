@@ -7,7 +7,7 @@ the ⲧⲁⲛⲥⲏⲃⲉ ⲛ̄ⲧⲙⲛ̄ⲧⲛⲣⲙ̄ⲛ̄ⲕⲏⲙⲉ discor
 ## Resources
 
 The source for this is [Papyrus Chester Beatty I](https://viewer.cbl.ie/viewer/image/Pap_1_1/1/) written during the New Kingdom period around 1160 BCE,
-probably in Thebes.
+probably in Thebes. Images are [CC BY-NC 4.0](http://creativecommons.org/licenses/by-nc/4.0/).
 
 - Alan Gardiner *The Library of A. Chester Beatty* Oxford, 1931.
   (hieroglyphic transcription, background description)
