@@ -7,8 +7,9 @@
 ++JSesh_standard_sign_height 18.0 +s
 ++JSesh_small_body_scale_limit 12.0 +s
 ++JSesh_cartouche_line_width 1.0 +s
-++JSesh_small_sign_centered false +s
+++JSesh_small_sign_centered true +s
 ++JSesh_page_direction LEFT_TO_RIGHT +s
 ++JSesh_max_quadrantHeight 18.0 +s
 ++JSesh_page_orientation HORIZONTAL +s
-L1:D21-G40-G1-wp:p-t:(Z7-Z9)
+|1-L1\\red:D21\\red-G40\red-G1\red-wp\red:p\red-t\red:[[\red*Z7\red*Z9\red*]]\red-A2\red-G5_-G7_-H*(n:a)-stX_-G7_-S:t-U30_-A-Z7-Z9:Y1-Z3A-xpr-i-A40-Y1:Z2-aA:a_-A-i*i-t:Z5-Y1:Z2-A19_-Z7_-A1:Z2_-A20_-Z7_-A1:Z2-i*A2-xpr:r_-i*i-Y1-Z3A-i*s_-t*Z7-!
+|2-
