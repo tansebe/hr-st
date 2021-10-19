@@ -17,5 +17,5 @@ probably in Thebes. Images are [CC BY-NC 4.0](http://creativecommons.org/license
 - Simpson "The Contendings of Horus and Seth" in *The Literature of Ancient Egypt* 2003, pp. 91-103.
   (translation)
 
-- Lichtheim
+- Lichtheim *Ancient Egyptian Literature* vol. 2, 1973, 2006.
   (translation)
