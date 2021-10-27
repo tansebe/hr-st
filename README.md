@@ -22,6 +22,3 @@ probably in Thebes. Images are [CC BY-NC 4.0](http://creativecommons.org/license
 
 - Lichtheim *Ancient Egyptian Literature* vol. 2, 1973, 2006.
   (translation)
-
-
-<!-- Christian's demo comment to show people in office hours how github works -->
