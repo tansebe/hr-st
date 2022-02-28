@@ -20,9 +20,14 @@ The individual lines are generated using `code/split_mdc_lines.py`.
 
 1. Generating MdC Lines
 
+Do not edit lines in the `mdc_lines` directory. If you do, they will be overwritten.
+Instead, edit the line in the relevant page in `mdc_pages`.
+Then, run `python code/split_mdc_lines.py` to update all the line MdC.
+Note that you will also need to regenerate the images afterward.
+
 2. Generating bitmapped images
 
-This project relies on a separate project [JSesh sample](https://github.com/jare/jsesh_sample) to generate a list of png images. Because that project is rather difficult to use without following its instructions to the letter, I've been generating these images by simply copying the MdC lines from this project into that one (change the `.gly` extension to `.txt`), generating the images there, and copying the finished images back to the relevant folder in this project. Obviously there exists a much more elegant method for doing this automatically, but so far this cludge is fast and reliable enough to preclude developing another workflow.
+This project relies on a separate project [JSesh sample](https://github.com/jare/jsesh_sample) to generate a list of png images. Because that project is rather difficult to use without following its instructions to the letter, I've been generating these images by simply copying the MdC lines from this project into that one (change the `.gly` extension to `.txt` if necessary), generating the images there, and copying the finished images back to the relevant folder in this project. Obviously there exists a much more elegant method for doing this automatically, but so far this cludge is fast and reliable enough to preclude developing another workflow.
 
 ## Resources
 
