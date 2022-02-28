@@ -9,24 +9,43 @@ the ⲧⲁⲛⲥⲏⲃⲉ ⲛ̄ⲧⲙⲛ̄ⲧⲛⲣⲙ̄ⲛ̄ⲕⲏⲙⲉ discor
 
 ## Usage
 
-### General File Generation and Editing
+### General File Generation and Editing (The Easy Stuff)
+
+#### The Hieroglyphic Transcription
 
 Manuel de Codage (MdC) files to be edited are in the `mdc_pages` directory. 
-They are named according to page number. 
-Please only edit these files when updating the hieroglyphic transcription.
-The individual lines are generated using `code/split_mdc_lines.py`.
+They are named according to page number.
+Feel free to edit the hieroglyphs there as needed.
+Note that if you edit any MdC text in any folder *other than* `mdc_pages`, 
+your work will probably be overwritten when the site gets updated.
+Just stick to `mdc_pages` and you'll be fine.
 
-### Building Output
+#### The Hieratic Manuscript
 
-#### Quick Workflow 
+As you can probably tell, the hieratic text we're using is taken from a large image and cropped into individual lines.
+This is a slightly tedious process, but it must be done, and it does offer some benefit in terms of getting a better sense of the manuscript.
+All of the materials for this are in the `hieratic_lines` folder.
+It should be clear enough how it works.
+First we have to cut out the page, then the lines, then the cropped lines have to be further refined to look nice and show only the line we want. 
+You can work on any part of that. You can't break anything that we can't fix, so be bold and get to work. Worst case, you learn some hieratic.
 
-1. `code/split_mdc_lines`
-2.  `../jsesh_sample` -> make images -> copy images to `hr-st`
-3. `code/generate_webpage`
-4. upload changes
+#### An Important Warning!
+
+You really can't break anything in this, so you should feel free to fork and tinker.
+If you do end up messing something up, we can always roll back your changes. 
+Seriously, go nuts.
+
+## Building Output (The Difficult Stuff)
+
+### Quick Workflow 
+
+1. `python code/split_mdc_lines.py`
+1.  `../jsesh_sample` -> make images (follow instructions in that readme) -> copy images to `hr-st`
+1. `code/generate_webpage`
+1. upload changes
 
 
-#### Detailed Process
+### Detailed Process
 
 1. Generating MdC Lines
 
