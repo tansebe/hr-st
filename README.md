@@ -1,8 +1,8 @@
 # Contendings of Horus and Seth
 
-This a collaboration space for a transcription of this ancient
-Egyptian story. Produced by the Hieratic Reading Group from
-the ⲧⲁⲛⲥⲏⲃⲉ ⲛ̄ⲧⲙⲛ̄ⲧⲛⲣⲙ̄ⲛ̄ⲕⲏⲙⲉ discord server.
+This a collaboration space for [a transcription of this ancient
+Egyptian story](https://tansebe.github.io/hr-st/hr-st.html). Produced by the Hieratic Reading Group from
+the [ⲧⲁⲛⲥⲏⲃⲉ ⲛ̄ⲧⲙⲛ̄ⲧⲛⲣⲙ̄ⲛ̄ⲕⲏⲙⲉ](https://discord.gg/eWuykwPnxt) discord server.
 
 ![Chester Beatty Papyrus image](https://viewer.cbl.ie/viewer/api/v1/records/Pap_1_1/files/images/D0003317.jpg/2314,1293,1017,224/max/0/default.jpg)
 ![N41:z-Xrd-m-D53-nb:r-Dr:r-G7](hr-st-sample.svg)
@@ -60,7 +60,7 @@ This project relies on a separate project [JSesh sample](https://github.com/jare
 
 3. Generate webpage
 
-The script at `python code/generate_webpage.py` will create a webpage in the `docs` folder (already configured to appear online on [github pages](https://christiancasey.github.io/hr-st/hr-st.html)). In the process, it will also copy all images from their respective directories into docs for inclusion on the page. This makes the script somewhat slow, but it also means that `docs` contains a clean webpage with no external dependencies.
+The script at `python code/generate_webpage.py` will create a webpage in the `docs` folder (already configured to appear online on [github pages](https://tansebe.github.io/hr-st/hr-st.html)). In the process, it will also copy all images from their respective directories into docs for inclusion on the page. This makes the script somewhat slow, but it also means that `docs` contains a clean webpage with no external dependencies.
 
 ## Academic Sources
 
