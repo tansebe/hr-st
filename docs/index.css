@@ -1,0 +1,4 @@
+img.hieroglyphic {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
