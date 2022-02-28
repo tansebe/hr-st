@@ -29,7 +29,7 @@ Note that you will also need to regenerate the images afterward.
 
 This project relies on a separate project [JSesh sample](https://github.com/jare/jsesh_sample) to generate a list of png images. Because that project is rather difficult to use without following its instructions to the letter, I've been generating these images by simply copying the MdC lines from this project into that one (change the `.gly` extension to `.txt` if necessary), generating the images there, and copying the finished images back to the relevant folder in this project. Obviously there exists a much more elegant method for doing this automatically, but so far this cludge is fast and reliable enough to preclude developing another workflow.
 
-## Resources
+## Academic Sources
 
 The source for this is [Papyrus Chester Beatty I](https://viewer.cbl.ie/viewer/image/Pap_1_1/1/) written during the New Kingdom period around 1160 BCE,
 probably in Thebes. Images are [CC BY-NC 4.0](http://creativecommons.org/licenses/by-nc/4.0/).
