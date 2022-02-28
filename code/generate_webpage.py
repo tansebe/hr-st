@@ -32,6 +32,8 @@ numPages = len(pageList)
 for i in range(numPages):
     currentPage = i+1 # Let's just make life easier whenever we can
     
+    print('Generating page %i' % currentPage)
+    
     html += '\n\n    <h2>Manuscript Page %i</h2>\n' % currentPage
     
     # Use the number of hieratic images to decide the number of lines for the page
@@ -41,18 +43,25 @@ for i in range(numPages):
     for j in range(numLines):
         currentLine = j+1 # Easy life
         
+        print('Generating page %i, line %i' % (currentPage,currentLine))
         
+        # Save copies of all images in /docs for the webpage to use
         im = Image.open('../hieratic_lines/page%02i/page%02i_line%03i.png' % (currentPage, currentPage, currentLine))
-        width = im.size[0]
+        width = im.size[0] # Get the width of the hieratic line image to make the glyphs match later
+        im.save('../docs/images/hieratic_page%02i_line%03i.png' % (currentPage, currentLine))
+        
+        im = Image.open('../png_lines/page%02i_line%03i.png' % (currentPage, currentLine))
+        im.save('../docs/images/hieroglyphic_page%02i_line%03i.png' % (currentPage, currentLine))
+        
         
         html += '\n\n'
         html += '\n    <div class="line">'
-        html += '\n    <h3>Line %i</h3>' % currentLine
+        html += '\n    <h3>Page %i, Line %i</h3>' % (currentPage, currentLine)
         html += '\n      <div class="hieratic">'
-        html += '\n        <img src="../hieratic_lines/page%02i/page%02i_line%03i.png" />' % (currentPage, currentPage, currentLine)
+        html += '\n        <img src="./images/hieratic_page%02i_line%03i.png" />' % (currentPage, currentLine)
         html += '\n      </div>'
         html += '\n      <div class="hieroglyphic">'
-        html += '\n        <img src="../png_lines/page%02i_line%03i.png" width="%ipx" class="hieroglyphic" />' % (currentPage, currentLine, width)
+        html += '\n        <img src="./images/hieroglyphic_page%02i_line%03i.png" width="%ipx" class="hieroglyphic" />' % (currentPage, currentLine, width)
         html += '\n      </div>'
         html += '\n    </div>'
 
