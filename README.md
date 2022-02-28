@@ -7,6 +7,23 @@ the ⲧⲁⲛⲥⲏⲃⲉ ⲛ̄ⲧⲙⲛ̄ⲧⲛⲣⲙ̄ⲛ̄ⲕⲏⲙⲉ discor
 ![Chester Beatty Papyrus image](https://viewer.cbl.ie/viewer/api/v1/records/Pap_1_1/files/images/D0003317.jpg/2314,1293,1017,224/max/0/default.jpg)
 ![N41:z-Xrd-m-D53-nb:r-Dr:r-G7](hr-st-sample.svg)
 
+## Usage
+
+### General File Generation and Editing
+
+Manuel de Codage (MdC) files to be edited are in the `mdc_pages` directory. 
+They are named according to page number. 
+Please only edit these files when updating the hieroglyphic transcription.
+The individual lines are generated using `code/split_mdc_lines.py`.
+
+### Building Output
+
+1. Generating MdC Lines
+
+2. Generating bitmapped images
+
+This project relies on a separate project [JSesh sample](https://github.com/jare/jsesh_sample) to generate a list of png images. Because that project is rather difficult to use without following its instructions to the letter, I've been generating these images by simply copying the MdC lines from this project into that one (change the `.gly` extension to `.txt`), generating the images there, and copying the finished images back to the relevant folder in this project. Obviously there exists a much more elegant method for doing this automatically, but so far this cludge is fast and reliable enough to preclude developing another workflow.
+
 ## Resources
 
 The source for this is [Papyrus Chester Beatty I](https://viewer.cbl.ie/viewer/image/Pap_1_1/1/) written during the New Kingdom period around 1160 BCE,
