@@ -36,7 +36,7 @@ for i in range(numPages):
     
     print('Generating page %i' % currentPage)
     
-    html += '\n\n    <h2 class="page-number">Manuscript Page %i</h2>\n' % currentPage
+    html += '\n\n    <a id="page%02i"><h2 class="page-number">Manuscript Page %i</h2></a>\n' % (currentPage, currentPage)
     
     # Use the number of hieratic images to decide the number of lines for the page
     lineList = sorted(glob.glob('../hieratic_lines/page%02i/*.png' % currentPage))
@@ -47,18 +47,22 @@ for i in range(numPages):
         
         print('Generating page %i, line %i' % (currentPage,currentLine))
         
-        # Save copies of all images in /docs for the webpage to use
-        im = Image.open('../hieratic_lines/page%02i/page%02i_line%03i.png' % (currentPage, currentPage, currentLine))
-        width = im.size[0] # Get the width of the hieratic line image to make the glyphs match later
-        im.save('../docs/images/hieratic_page%02i_line%03i.png' % (currentPage, currentLine))
-        
-        im = Image.open('../png_lines/page%02i_line%03i.png' % (currentPage, currentLine))
-        im.save('../docs/images/hieroglyphic_page%02i_line%03i.png' % (currentPage, currentLine))
-        
+        try:
+            # Save copies of all images in /docs for the webpage to use
+            im = Image.open('../hieratic_lines/page%02i/page%02i_line%03i.png' % (currentPage, currentPage, currentLine))
+            width = im.size[0] # Get the width of the hieratic line image to make the glyphs match later
+            im.save('../docs/images/hieratic_page%02i_line%03i.png' % (currentPage, currentLine))
+            
+            im = Image.open('../png_lines/page%02i_line%03i.png' % (currentPage, currentLine))
+            im.save('../docs/images/hieroglyphic_page%02i_line%03i.png' % (currentPage, currentLine))
+        except:
+            break
         
         html += '\n\n'
         html += '\n    <div class="line">'
-        html += '\n    <h3 class="line-number">Page %i, Line %i</h3>' % (currentPage, currentLine)
+        html += '\n    <a id="page%02i_line%03i">' % (currentPage, currentLine)
+        html += '\n      <h3 class="line-number">Page %i, Line %i</h3>' % (currentPage, currentLine)
+        html += '\n    </a>'
         html += '\n      <div class="hieratic">'
         html += '\n        <img src="./images/hieratic_page%02i_line%03i.png" />' % (currentPage, currentLine)
         html += '\n      </div>'

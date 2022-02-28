@@ -1,14 +1,19 @@
 
 .container {
   width: 2000px;
-  margin: auto;
+  /* margin: 0 auto; */
   padding: 0 20px;
   border: 0px solid red;
 }
 
 .line-number, .page-number {
   text-align: right;
-  margin-top: 100px;
+  margin-top: 50px;
+}
+
+.line {
+  -webkit-transform: scale(0.75);
+  transform: scale(0.75);
 }
 
 .hieratic, .hieroglyphic {
