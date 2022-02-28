@@ -1,9 +1,11 @@
 
 .container {
   width: 2000px;
-  margin: auto;
+  /* margin: 0 auto; */
   padding: 0 20px;
   border: 0px solid red;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
 }
 
 .line-number, .page-number {
