@@ -10,8 +10,10 @@ HTML_HEADER = """<!DOCTYPE html>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <div class="container">
     """
 HTML_FOOTER = """
+    </div>
   </body>
 </html>
 """
@@ -34,7 +36,7 @@ for i in range(numPages):
     
     print('Generating page %i' % currentPage)
     
-    html += '\n\n    <h2>Manuscript Page %i</h2>\n' % currentPage
+    html += '\n\n    <h2 class="page-number">Manuscript Page %i</h2>\n' % currentPage
     
     # Use the number of hieratic images to decide the number of lines for the page
     lineList = sorted(glob.glob('../hieratic_lines/page%02i/*.png' % currentPage))
@@ -56,7 +58,7 @@ for i in range(numPages):
         
         html += '\n\n'
         html += '\n    <div class="line">'
-        html += '\n    <h3>Page %i, Line %i</h3>' % (currentPage, currentLine)
+        html += '\n    <h3 class="line-number">Page %i, Line %i</h3>' % (currentPage, currentLine)
         html += '\n      <div class="hieratic">'
         html += '\n        <img src="./images/hieratic_page%02i_line%03i.png" />' % (currentPage, currentLine)
         html += '\n      </div>'

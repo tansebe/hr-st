@@ -18,6 +18,16 @@ The individual lines are generated using `code/split_mdc_lines.py`.
 
 ### Building Output
 
+#### Quick Workflow 
+
+1. `code/split_mdc_lines`
+2.  `../jsesh_sample` -> make images -> copy images to `hr-st`
+3. `code/generate_webpage`
+4. upload changes
+
+
+#### Detailed Process
+
 1. Generating MdC Lines
 
 Do not edit lines in the `mdc_lines` directory. If you do, they will be overwritten.
@@ -28,6 +38,10 @@ Note that you will also need to regenerate the images afterward.
 2. Generating bitmapped images
 
 This project relies on a separate project [JSesh sample](https://github.com/jare/jsesh_sample) to generate a list of png images. Because that project is rather difficult to use without following its instructions to the letter, I've been generating these images by simply copying the MdC lines from this project into that one (change the `.gly` extension to `.txt` if necessary), generating the images there, and copying the finished images back to the relevant folder in this project. Obviously there exists a much more elegant method for doing this automatically, but so far this cludge is fast and reliable enough to preclude developing another workflow.
+
+3. Generate webpage
+
+The script at `python code/generate_webpage.py` will create a webpage in the `docs` folder (already configured to appear online on [github pages](https://christiancasey.github.io/hr-st/hr-st.html)). In the process, it will also copy all images from their respective directories into docs for inclusion on the page. This makes the script somewhat slow, but it also means that `docs` contains a clean webpage with no external dependencies.
 
 ## Academic Sources
 
