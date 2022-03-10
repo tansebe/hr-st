@@ -11,4 +11,4 @@
 ++JSesh_page_direction RIGHT_TO_LEFT +s
 ++JSesh_max_quadrantHeight 18.0 +s
 ++JSesh_page_orientation HORIZONTAL +s
-|4,1-n:nm*m-a-W-A55-V6-A24-Hr-1-p:z-d:F37B-F51:f-m-G41-A-i-i-f-zH-1-pr-.-i-W-ib-1-f-r-Dw-W-W-y:G37-aA:Y1-wr:r-.-i-W-f-wa:a*1-G37:t*W-f-.-$r-x:r-i-r-Aa18-1-i-A-d:t*Z5-N23-1-aA:t*Y1-wn:n-i-n-$b-!
+|4,11-nTr-G7-m-D53:Y1-t:A-N6:d-nTrw-G7-Z3-m-D&D46-.-anx-n:x-mwt:t*H8-G7-n:t*H8-G7-nTr-t:D21-t:H8-I12-.-anx-n:x-p:t-H-G7-tA:Z1*N23-t-W-nn-n:n-G7-G7-q-A-A28-Y1-Sw-W-t:Z4-S9-W:D40-Z5-Z5-Z5-A24-D36-b-F16-F16-!
