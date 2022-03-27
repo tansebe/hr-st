@@ -67,7 +67,7 @@ for i in range(numPages):
         html += '\n        <img src="./images/hieratic_page%02i_line%03i.png" />' % (currentPage, currentLine)
         html += '\n      </div>'
         html += '\n      <div class="hieroglyphic">'
-        html += '\n        <img src="./images/hieroglyphic_page%02i_line%03i.png" width="%ipx" class="hieroglyphic" />' % (currentPage, currentLine, width)
+        html += '\n        <img src="./images/hieroglyphic_page%02i_line%03i.png" width="%ipx" class="flip" />' % (currentPage, currentLine, width)
         html += '\n      </div>'
         html += '\n    </div>'
 
