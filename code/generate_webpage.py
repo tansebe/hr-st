@@ -1,5 +1,6 @@
 
 import glob
+import os.path
 import shutil
 
 from PIL import Image
@@ -50,20 +51,20 @@ for i in range(numPages):
         
         current_png_ref = 'page%02i_line%03i.png' % (currentPage, currentLine)
 
-        try:
-            # Save copies of all images in /docs for the webpage to use
-            hieratic_src = '../hieratic_lines/page%02i/%s' % (currentPage, current_png_ref)
-            hieratic_dst = '../docs/images/hieratic_%s' % current_png_ref
-            shutil.copyfile(hieratic_src, hieratic_dst)
-            # Get the width of the hieratic line image to make the glyphs match later
-            im = Image.open(hieratic_dst)
-            width = im.size[0]
-            hieroglyphic_src = '../png_lines/%s' % current_png_ref
-            hieroglyphic_dst = '../docs/images/hieroglyphic_%s' % current_png_ref
-            shutil.copyfile(hieratic_src, hieratic_dst)
-        except:
+        # Save copies of all images in /docs for the webpage to use
+        hieratic_src = '../hieratic_lines/page%02i/%s' % (currentPage, current_png_ref)
+        hieroglyphic_src = '../png_lines/%s' % current_png_ref
+        # Go to the next page if we've run out of images
+        if not os.path.exists(hieratic_src) or not os.path.exists(hieroglyphic_src):
             break
-        
+        hieratic_dst = '../docs/images/hieratic_%s' % current_png_ref
+        shutil.copyfile(hieratic_src, hieratic_dst)
+        # Get the width of the hieratic line image to make the glyphs match later
+        im = Image.open(hieratic_dst)
+        width = im.size[0]
+        hieroglyphic_dst = '../docs/images/hieroglyphic_%s' % current_png_ref
+        shutil.copyfile(hieratic_src, hieratic_dst)
+
         html += '\n\n'
         html += '\n    <div class="line">'
         html += '\n    <a id="page%02i_line%03i">' % (currentPage, currentLine)
