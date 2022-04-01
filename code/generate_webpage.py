@@ -1,5 +1,7 @@
 
 import glob
+import os.path
+import shutil
 
 from PIL import Image
 
@@ -47,27 +49,32 @@ for i in range(numPages):
         
         print('Generating page %i, line %i' % (currentPage,currentLine))
         
-        try:
-            # Save copies of all images in /docs for the webpage to use
-            im = Image.open('../hieratic_lines/page%02i/page%02i_line%03i.png' % (currentPage, currentPage, currentLine))
-            width = im.size[0] # Get the width of the hieratic line image to make the glyphs match later
-            im.save('../docs/images/hieratic_page%02i_line%03i.png' % (currentPage, currentLine))
-            
-            im = Image.open('../png_lines/page%02i_line%03i.png' % (currentPage, currentLine))
-            im.save('../docs/images/hieroglyphic_page%02i_line%03i.png' % (currentPage, currentLine))
-        except:
+        current_png_ref = 'page%02i_line%03i.png' % (currentPage, currentLine)
+
+        # Save copies of all images in /docs for the webpage to use
+        hieratic_src = '../hieratic_lines/page%02i/%s' % (currentPage, current_png_ref)
+        hieroglyphic_src = '../png_lines/%s' % current_png_ref
+        # Go to the next page if we've run out of images
+        if not os.path.exists(hieratic_src) or not os.path.exists(hieroglyphic_src):
             break
-        
+        hieratic_dst = '../docs/images/hieratic_%s' % current_png_ref
+        shutil.copyfile(hieratic_src, hieratic_dst)
+        # Get the width of the hieratic line image to make the glyphs match later
+        im = Image.open(hieratic_dst)
+        width = im.size[0]
+        hieroglyphic_dst = '../docs/images/hieroglyphic_%s' % current_png_ref
+        shutil.copyfile(hieratic_src, hieratic_dst)
+
         html += '\n\n'
         html += '\n    <div class="line">'
         html += '\n    <a id="page%02i_line%03i">' % (currentPage, currentLine)
         html += '\n      <h3 class="line-number">Page %i, Line %i</h3>' % (currentPage, currentLine)
         html += '\n    </a>'
         html += '\n      <div class="hieratic">'
-        html += '\n        <img src="./images/hieratic_page%02i_line%03i.png" />' % (currentPage, currentLine)
+        html += '\n        <img src="./images/hieratic_%s" />' % current_png_ref
         html += '\n      </div>'
         html += '\n      <div class="hieroglyphic">'
-        html += '\n        <img src="./images/hieroglyphic_page%02i_line%03i.png" width="%ipx" class="flip" />' % (currentPage, currentLine, width)
+        html += '\n        <img src="./images/hieroglyphic_%s" width="%ipx" class="flip" />' % (current_png_ref, width)
         html += '\n      </div>'
         html += '\n    </div>'
 
