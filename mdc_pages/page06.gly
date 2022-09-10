@@ -8,15 +8,20 @@
 ++JSesh_small_body_scale_limit 12.0 +s
 ++JSesh_cartouche_line_width 1.0 +s
 ++JSesh_small_sign_centered true +s
-++JSesh_page_direction LEFT_TO_RIGHT +s
+++JSesh_page_direction RIGHT_TO_LEFT +s
 ++JSesh_max_quadrantHeight 18.0 +s
 ++JSesh_page_orientation HORIZONTAL +s
 |6.1-t:X4-$r-wn:n-i-n:z-$b-Hr-Z1-D&d-n:f-i-Z7-B1-D37:t-n:k-G41-A-x:t-m-S20-O39-n:nbw-n:t*y-m-d:t*Z1*O__-i-Z7-f-Hr-Z1-D&d-n:z-i-m-m:a-t-Z7-G41-A-x:t-m-Z7-S20-O39-n:nbw-i-w-s-t-!
 |6.2-D37:t*f-n:f-$r-wn:n-i-n:f-$b-DA-A-i-i-P1-s-t-r-G41-A-Ff1-Ff1-N23-Z1-Hr:r-y:ib-Z1-x:r-i-r-sw-Z7-m-n:a-i-i-D56-D54-Xr:D21-y:Y1-n:A-n:nw*Z7-M1-Z3-$r-wn:n-i-n:z-$b-n:U19:W24-Z7-D5-i-Z7-s-t-p-i-i-!
-|6.3-D5-t:A-N6:d-nTrw-G7-Z3A-i-G43-a-n:Z2-N42:z-A17-Hr-Z1-imi-m:y-A2-G39-q-Z7-#b-m-D53:Y1-#e-m-D53:Y1-nb:D21-Dr:D21-G7-m-G41-A-i-i-f-O22-Z1-G7-pr-$r-aHa-n:a-$b-C7-G7-n:U19-W24-!
-| 6.4-D5_-i*Z7*f_-p_-(t:r)*i*tr_-D5-s-t_-i*w*s*t_-d:(y*N31)-ii*A*i*i_-.:D54_-ti*i_-wA*A*Z7*Z7_-N31:D54-ti*i__-$r-wn:n_-i*(n:z)-$b-Hr*Z1_-V49A*(t:y)-A2_-m_-H_-kA-Ff1*Ff1_-A2_-s*t_-i*w*s*t_-ir:(r*t)-xpr*r_-(Z5:Y1)*Z3A*s*t-!
+|6.3-D6-t:A-N6:d-nTrw-G7-Z3A-i-G43-a-n:Z2-N42:z-A17-Hr-Z1-imi-m:y-A2-G39-q-Z7-#b-m-D53:Y1-#e-m-D53:Y1-nb:D21-Dr:D21-G7-m-G41-A-i-i-f-O22-Z1-G7-pr-$r-aHa-n:a-$b-C7-G7-n:U19-W24-!
+| 6.4-D6_-i*Z7*f_-p_-(t:r)*i*tr_-D5-s-t_-i*w*s*t_-d:(y*N31)-ii*A*i*i_-.:D54_-ti*i_-wA*A*Z7*Z7_-N31:D54-ti*i__-$r-wn:n_-i*(n:z)-$b-Hr*Z1_-V49A*(t:y)-A2_-m_-H_-kA-Ff1*Ff1_-A2_-s*t_-i*w*s*t_-ir:(r*t)-xpr*r_-(Z5:Y1)*Z3A*s*t-!
 |6.5-m_-wa:(a*Z1)-(S:r)*i*Z7_-Xrd_-nfr*(f:r)*(t:Y1)*n_-H*(a:t*F51)*Z3A_-s*t*i*Z7_-D35:n_-(wn:n)*Z7_-mi*i*qd*(d:nw*Z7)*Y1*s*t_-m*pA*A_-tA:(Z1*N23)-r*(Dr:r)*f_-$r-aHa*(a:n)*(n:f)-$b-U7:r_-A2*ti*i*s*t*r_-Dw*Z7*Z7*G37_*(aA:Y1)*n-!
 |6.6-wr:r_-$r-wn:n_-i:n-$b-stX*G7__-Hr*Z1*d__-(wn:n)*(y:D54)*f_-i*Z7*f_-N41:z_-Xrd_-Hr*Z1_-imi*(m:y)-A2_-aq_-q*Z7_-iw:Z2_-r_-H*(n:a)-t:A_-N6:d_-R8*R8*R8*G7*Z3A_-aA:t*Y1_-i*Z7*f_-Sm*m*D54_-.:r_-ir:r*t_-n_-HAt:t*Z1_-ti*i*s-!
 |6.7-i*Z7*b*Z7*p*Z7*i*i_-t:Y1_-wa:(a*Z1)-p_-(t:r)*i*tr_-D6_-s*t_-Hr:r_-y:ib*Z1_-r:f_-$r-wn:n_-i*(n:f)-$b-aHa*(a:D54)-n_-HA*A_-tp*Z1_-wa:a*Z1_-(n:h)*A*M1*Z3A_-i*Z7*f_-(a:S)*A2_-n:z_-s*t_-i*Z7*f_-Hr*Z1_-D&&&d_-n:z_-t*Z7*A1-!
 |6.8-d:y*N31_-m_-D37:/*/_-(S:r)*i_-Z7_-Xrd_-t:Y1_-nfr*(f:r)-t:Y1__-i*Z7*s*t_-D&&&(d:n)*f_-kA*Z1*i*i*A2_-pA*A*i*i_-nb:B1_-G7_-aA:Y1_-i*r_-i*(nw:k)*A1_-wn:n_-Z7*B1_-m_-N41:(A1*B1)-m__-D37:A_-i*i_-t:Y1_-wa:(a*Z1)-mniw_-Ff1*Ff1*Ff1_-A24_-(E2:Z2)*i*Z7*B1-!
-|6.9-
+|6.9-ms*s_-F16:Z2_-n:f_-wa:(a*Z1)-G39_-Z1_-A1_-TA*A*i*i_-D53:/*/_-i*w*G41*A*i*i*B1_-h_-A_-D53:/*/_-m:t_-Z6_-i*Z7_-G41*A_-a:D&&&d_-Xrd_-G37_-xpr*r*Z7_-m*Aa18_-Z1_-(n:A)*i*A*(w:t)-F27_-Z1_-Z3A-n*G41*A*i*i*f_-i*(t:f)*G7-!
+|6.10-(x:r)*(i*r)-wa:(a*Z1)-r:T_-A1:Z2_-(Dr:r)*i_-Dr:r_-A30_-Y1:Z2_-ii*A*i*i_-y:D54_-i*Z7*f_-N41:z_-Xrd_-m_-G41*A*i*i*A1_-i*A2_-h*A*i*i*(t:pr)-Z3A_-x:r*f_-mi*i_-n:A_-y_-Hr*Z1_-D&&&(d:n)-G41*A*i*i*B1_-(S:r)*i*Z7-!
+|6.11-Xrd_-G7*i*Z7*A1_-(q:n)*(q:n)-Z9:D40:k_-m*t*Z7*A1_-(n:N41)*m*Z7*Y1_-A24_-(n:A)-i*A*(w:t)-O44_-Y1:Z2_-n_-G41*A_-(i*i):k_-i*(t:f)*G7_-m*t*Z7*A1_-xA*A_-a:D54:k_-r*b*Z7_-n:Z2_-r*Z1_-N31:D54_-x:r*f_-Hr*Z1_-D&&&(d:n)*f_-x:r_-ib*Z1_-B1:r_-D37:t-!
+|6.12-ir_-i*i:k_-n:f_-n:xt:(x*t)-A24*t*Z7_-$r-aHa*(a:n)-$b-stX*G7_-Hr*Z1_-D&&&d_-n:z_-i*A2_-ir:r*t*Z7_-D37:t_-n:A_-i*A*(w:t)-O44_-Y1:Z2_-n_-G41*A_-r:T_-B1:Z2_-(Dr:r)*i*(Dr:r)*i_-A30_-Y1:Z2_-i*Z7_-G41*A_-(S:r)*i*Z7*Xrd-!
+|6.13-n*G41*A_-aHA*A*Z7_-t:y_-A24_-aHa*(a:D54)-$r-aHa*(a:n)-$b-st_-t:H8_-G7_-Hr*Z1_-ir:r*t_-xpr*r*(Z5:Y1)-Z3A_-s*t*m_-wa:(a*Z1)-(Dr:r)*i_-t:G41_-i*Z7_-s*t_-p*Z7*i*i*t_-H5_-i*w_-s*t_-N41:z_-Xrd_-Hr*Z1_-DA*A-!
+|6.14-DA*A_-tp*Z1_-n_-wa:(a*Z1)-n_-V49A*(t:y)-M1*Z3A_-i*w*s*t_-(a:S)*A2_-n_-stX*G7*i*Z7*s*t_-Hr*Z1_-D&&&d_-n:f_-i_-A2_-V14*m*Z7_-D6:n:k_-i*n*m_-(r*Z1):k-i*A2_-D&&&d_-sw*Z7_-D&&&(z:k)-i*n_-z:S_-Aa18*A*(Z5:Y1)*Z3
