@@ -2,6 +2,7 @@
 import glob
 import os.path
 import shutil
+import time
 
 from PIL import Image
 
@@ -65,6 +66,12 @@ for i in range(numPages):
         hieroglyphic_dst = '../docs/images/hieroglyphic_%s' % current_png_ref
         shutil.copyfile(hieratic_src, hieratic_dst)
 
+        # Older rendered text needs to be flipped to RTL.
+        flip_boundary = (2022, 3, 14, 0, 0, 0, 0, 0, -1)
+        hieroglyphic_mtime = os.path.getmtime(hieroglyphic_src)
+        should_flip = (hieroglyphic_mtime - time.mktime(flip_boundary)) < 0
+        maybe_flip = 'class="flip" ' if should_flip else ''
+
         html += '\n\n'
         html += '\n    <div class="line">'
         html += '\n    <a id="page%02i_line%03i">' % (currentPage, currentLine)
@@ -74,7 +81,7 @@ for i in range(numPages):
         html += '\n        <img src="./images/hieratic_%s" />' % current_png_ref
         html += '\n      </div>'
         html += '\n      <div class="hieroglyphic">'
-        html += '\n        <img src="./images/hieroglyphic_%s" width="%ipx" class="flip" />' % (current_png_ref, width)
+        html += '\n        <img src="./images/hieroglyphic_%s" width="%ipx" %s/>' % (current_png_ref, width, maybe_flip)
         html += '\n      </div>'
         html += '\n    </div>'
 
