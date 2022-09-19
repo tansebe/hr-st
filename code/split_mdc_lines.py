@@ -15,7 +15,12 @@ JSESH_HEADER = """++JSesh_Info 1.0 +s
 OUTPUT_DIR = '../mdc_lines/'
 
 import glob
+import os
+
 pageList = glob.glob("../mdc_pages/page*.gly")
+
+# Create the output directory if necessary
+os.makedirs(OUTPUT_DIR, exist_ok = True)
 
 for pageName in pageList:
     pageNumber = int(pageName[-6:-4])
