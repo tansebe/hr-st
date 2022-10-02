@@ -60,12 +60,12 @@ for i in range(numPages):
             break
         hieratic_dst = '../docs/images/hieratic_%s' % current_png_ref
         shutil.copyfile(hieratic_src, hieratic_dst)
+        hieroglyphic_dst = '../docs/images/hieroglyphic_%s' % current_png_ref
+        shutil.copyfile(hieroglyphic_src, hieroglyphic_dst)
+
         # Get the width of the hieratic line image to make the glyphs match later
         im = Image.open(hieratic_dst)
         width = im.size[0]
-        hieroglyphic_dst = '../docs/images/hieroglyphic_%s' % current_png_ref
-        shutil.copyfile(hieratic_src, hieratic_dst)
-
         # Older rendered text needs to be flipped to RTL.
         flip_boundary = (2022, 3, 14, 0, 0, 0, 0, 0, -1)
         hieroglyphic_mtime = os.path.getmtime(hieroglyphic_src)
