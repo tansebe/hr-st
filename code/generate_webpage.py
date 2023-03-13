@@ -9,6 +9,7 @@ from PIL import Image
 HTML_HEADER = """<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>hr-st</title>
     <link rel="stylesheet" href="index.css" />
   </head>
