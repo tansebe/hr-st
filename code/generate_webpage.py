@@ -59,11 +59,13 @@ for i in range(numPages):
         
         current_png_ref = 'page%02i_line%03i.png' % (currentPage, currentLine)
 
-        # Save copies of all images in /docs for the webpage to use
+        # Copy images into /docs for the webpage to use
         hieratic_src = '../hieratic_lines/page%02i/%s' % (currentPage, current_png_ref)
         hieroglyphic_src = '../png_lines/%s' % current_png_ref
-        # Go to the next page if we've run out of images
-        if not os.path.exists(hieratic_src) or not os.path.exists(hieroglyphic_src):
+        have_hieratic = os.path.exists(hieratic_src)
+        have_hieroglyphic = os.path.exists(hieroglyphic_src)
+        if not have_hieratic or not have_hieroglyphic:
+            # Go to the next page if we've run out of images
             break
         hieratic_dst = '../docs/images/hieratic_%s' % current_png_ref
         shutil.copyfile(hieratic_src, hieratic_dst)
