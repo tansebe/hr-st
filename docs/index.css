@@ -1,20 +1,37 @@
 
 /* quick-link panel for navigation */
-nav {
+.navbar {
+  top: 0;
   right: 0;
   position: fixed;
-  margin: 1em;
-  transition: right 0.3;
+  margin: 0em 1em 0em 1em;
+}
+
+nav {
+  transition: translate 0.3s;
+}
+
+nav.hidden {
+  translate: 5em;
+}
+
+.big {
+  font-size: 200%;
 }
 
 /* Pages have an order, but remove the redundant automatic numbering. */
 nav ol {
   list-style-type: none;
   padding-left: 0;
+  margin-top: 0.5em;
 }
 
 nav li:hover {
   background: lightgray;
+}
+
+nav a {
+  text-decoration: none;
 }
 
 .container {

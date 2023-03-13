@@ -94,7 +94,11 @@ for i in range(numPages):
 
 
 # Build a navigation header for faster access than scrolling.
-nav = """<nav>
+nav = """<div class="navbar">
+    <button class="flip big"
+        aria-role="open and close navigation menu"
+      >𓊛</button>
+    <nav class="hidden">
       <ol>
 """
 for i in range(numPages):
@@ -103,9 +107,31 @@ for i in range(numPages):
     nav += '<li><a href="#page%02d">Page %d</a></li>\n' % (currentPage, currentPage)
 nav += """      </ol>
     </nav>
+    </div>
 """
 
-html = HTML_HEADER + nav + HTML_MAIN + html + HTML_FOOTER
+script = """
+<script>
+document.addEventListener('DOMContentLoaded', (e) => {
+  navbutton = document.querySelector('button');
+  navbutton.addEventListener('mousedown', (click) => {
+    toggle_nav();
+  });
+});
+
+function toggle_nav() {
+  nav = document.querySelector('nav');
+  if (nav.classList.contains('hidden')) {
+      nav.classList.remove('hidden');
+  } else {
+      nav.classList.add('hidden');
+  }
+}
+</script>
+"""
+
+html = HTML_HEADER + nav + HTML_MAIN + html + HTML_FOOTER + script
+
 f = open('../docs/hr-st.html', 'w')
 f.write(html)
 f.close()
