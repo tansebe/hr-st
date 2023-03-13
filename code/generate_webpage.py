@@ -14,7 +14,13 @@ HTML_HEADER = """<!DOCTYPE html>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    """
+HTML_MAIN = """
     <div class="container">
+    <div class="right">
+    <h1>Contendings of Horus and Seth</h1>
+    <p>Transcription from Papyrus Chester Beatty</p>
+    </div>
     """
 HTML_FOOTER = """
     </div>
@@ -87,8 +93,19 @@ for i in range(numPages):
         html += '\n    </div>'
 
 
+# Build a navigation header for faster access than scrolling.
+nav = """<nav>
+      <ol>
+"""
+for i in range(numPages):
+    currentPage = i + 1
+    nav += ' ' * 8
+    nav += '<li><a href="#page%02d">Page %d</a></li>\n' % (currentPage, currentPage)
+nav += """      </ol>
+    </nav>
+"""
 
-html = HTML_HEADER + html + HTML_FOOTER
+html = HTML_HEADER + nav + HTML_MAIN + html + HTML_FOOTER
 f = open('../docs/hr-st.html', 'w')
 f.write(html)
 f.close()

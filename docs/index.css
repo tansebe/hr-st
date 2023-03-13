@@ -1,4 +1,22 @@
 
+/* quick-link panel for navigation */
+nav {
+  right: 0;
+  position: fixed;
+  margin: 1em;
+  transition: right 0.3;
+}
+
+/* Pages have an order, but remove the redundant automatic numbering. */
+nav ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+nav li:hover {
+  background: lightgray;
+}
+
 .container {
   width: 2000px;
   /* margin: 0 auto; */
@@ -6,7 +24,7 @@
   border: 0px solid red;
 }
 
-.line-number, .page-number {
+.line-number, .page-number, .right {
   text-align: right;
   margin-top: 50px;
 }
