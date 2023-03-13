@@ -1,4 +1,39 @@
 
+/* quick-link panel for navigation */
+.navbar {
+  top: 0;
+  right: 0;
+  position: fixed;
+  margin: 0em 1em 0em 1em;
+}
+
+nav {
+  transition: translate 0.3s;
+}
+
+nav.hidden {
+  translate: 5em;
+}
+
+.big {
+  font-size: 200%;
+}
+
+/* Pages have an order, but remove the redundant automatic numbering. */
+nav ol {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0.5em;
+}
+
+nav li:hover {
+  background: lightgray;
+}
+
+nav a {
+  text-decoration: none;
+}
+
 .container {
   width: 2000px;
   /* margin: 0 auto; */
@@ -6,7 +41,7 @@
   border: 0px solid red;
 }
 
-.line-number, .page-number {
+.line-number, .page-number, .right {
   text-align: right;
   margin-top: 50px;
 }

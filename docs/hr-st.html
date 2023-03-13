@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>hr-st</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <div class="navbar">
+    <button class="flip big"
+        aria-role="open and close navigation menu"
+      >𓊛</button>
+    <nav class="hidden">
+      <ol>
+        <li><a href="#page01">Page 1</a></li>
+        <li><a href="#page02">Page 2</a></li>
+        <li><a href="#page03">Page 3</a></li>
+        <li><a href="#page04">Page 4</a></li>
+        <li><a href="#page05">Page 5</a></li>
+        <li><a href="#page06">Page 6</a></li>
+        <li><a href="#page07">Page 7</a></li>
+        <li><a href="#page08">Page 8</a></li>
+        <li><a href="#page09">Page 9</a></li>
+      </ol>
+    </nav>
+    </div>
+
     <div class="container">
+    <div class="right">
+    <h1>Contendings of Horus and Seth</h1>
+    <p>Transcription from Papyrus Chester Beatty</p>
+    </div>
     
 
     <a id="page01"><h2 class="page-number">Manuscript Page 1</h2></a>
@@ -1396,6 +1420,27 @@
         <img src="./images/hieroglyphic_page08_line013.png" width="2961px" />
       </div>
     </div>
+
+    <a id="page09"><h2 class="page-number">Manuscript Page 9</h2></a>
+
     </div>
   </body>
 </html>
+
+<script>
+document.addEventListener('DOMContentLoaded', (e) => {
+  navbutton = document.querySelector('button');
+  navbutton.addEventListener('mousedown', (click) => {
+    toggle_nav();
+  });
+});
+
+function toggle_nav() {
+  nav = document.querySelector('nav');
+  if (nav.classList.contains('hidden')) {
+      nav.classList.remove('hidden');
+  } else {
+      nav.classList.add('hidden');
+  }
+}
+</script>
