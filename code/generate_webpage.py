@@ -46,7 +46,7 @@ for i in range(numPages):
     
     print('Generating page %i' % currentPage)
     
-    html += '\n\n    <a id="page%02i"><h2 class="page-number">Manuscript Page %i</h2></a>\n' % (currentPage, currentPage)
+    html += '\n\n    <h2 class="page-number" id="page%02i">Manuscript Page %i</h2>\n' % (currentPage, currentPage)
     
     # Use the number of hieratic images to decide the number of lines for the page
     lineList = sorted(glob.glob('../hieratic_lines/page%02i/*.png' % currentPage))
@@ -82,10 +82,8 @@ for i in range(numPages):
         maybe_flip = 'class="flip" ' if should_flip else ''
 
         html += '\n\n'
-        html += '\n    <div class="line">'
-        html += '\n    <a id="page%02i_line%03i">' % (currentPage, currentLine)
+        html += '\n    <div class="line" id="page%02i_line%03i">' % (currentPage, currentLine)
         html += '\n      <h3 class="line-number">Page %i, Line %i</h3>' % (currentPage, currentLine)
-        html += '\n    </a>'
         html += '\n      <div class="hieratic">'
         html += '\n        <img src="./images/hieratic_%s" />' % current_png_ref
         html += '\n      </div>'
