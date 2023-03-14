@@ -4,11 +4,15 @@
   top: 0;
   right: 0;
   position: fixed;
-  margin: 0em 1em 0em 1em;
+  margin: 0em;
+  z-index: 1;
 }
 
 nav {
   transition: translate 0.3s;
+  background: white;
+  border-left: 1px solid;
+  padding: 0 8px;
 }
 
 nav.hidden {
