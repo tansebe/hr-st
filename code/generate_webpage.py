@@ -46,7 +46,8 @@ for i in range(numPages):
     
     print('Generating page %i' % currentPage)
     
-    html += '\n\n    <h2 class="page-number" id="page%02i">Manuscript Page %i</h2>\n' % (currentPage, currentPage)
+    html += '\n\n    <div class="page" id="page%02i">\n' % currentPage
+    html += '\n\n    <h2 class="page-number">Manuscript Page %i</h2>\n' % currentPage
     
     # Use the number of hieratic images to decide the number of lines for the page
     lineList = sorted(glob.glob('../hieratic_lines/page%02i/*.png' % currentPage))
@@ -91,6 +92,8 @@ for i in range(numPages):
         html += '\n        <img src="./images/hieroglyphic_%s" width="%ipx" %s/>' % (current_png_ref, width, maybe_flip)
         html += '\n      </div>'
         html += '\n    </div>'
+    # close page div
+    html += '\n    </div>'
 
 
 # Build a navigation header for faster access than scrolling.
