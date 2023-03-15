@@ -17,7 +17,7 @@ HTML_HEADER = """<!DOCTYPE html>
     """
 HTML_MAIN = """
     <div class="container">
-    <div class="right">
+    <div class="info">
     <h1>Contendings of Horus and Seth</h1>
     <p>Transcription from Papyrus Chester Beatty</p>
     </div>

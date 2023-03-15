@@ -39,24 +39,20 @@ nav a {
 }
 
 .container {
-  width: 2000px;
-  /* margin: 0 auto; */
+  width: 3020px;
   padding: 0 20px;
   border: 0px solid red;
+  /* Place block elements and text aligned on the right */
+  text-align: right;
+  direction: rtl;
 }
 
-.line-number, .page-number, .right {
-  text-align: right;
+.info, .page-number {
+  margin: 0 5em;
+}
+
+.line, .page {
   margin-top: 50px;
-}
-
-.line {
-  -webkit-transform: scale(0.75);
-  transform: scale(0.75);
-}
-
-.hieratic, .hieroglyphic {
-  text-align: right;
 }
 
 img.flip {
