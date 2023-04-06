@@ -9,11 +9,18 @@ from PIL import Image
 HTML_HEADER = """<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>hr-st</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    """
+HTML_MAIN = """
     <div class="container">
+    <div class="info">
+    <h1>Contendings of Horus and Seth</h1>
+    <p>Transcription from Papyrus Chester Beatty</p>
+    </div>
     """
 HTML_FOOTER = """
     </div>
@@ -39,7 +46,8 @@ for i in range(numPages):
     
     print('Generating page %i' % currentPage)
     
-    html += '\n\n    <a id="page%02i"><h2 class="page-number">Manuscript Page %i</h2></a>\n' % (currentPage, currentPage)
+    html += '\n\n    <div class="page" id="page%02i">\n' % currentPage
+    html += '\n\n    <h2 class="page-number">Manuscript Page %i</h2>\n' % currentPage
     
     # Use the number of hieratic images to decide the number of lines for the page
     lineList = sorted(glob.glob('../hieratic_lines/page%02i/*.png' % currentPage))
@@ -52,11 +60,13 @@ for i in range(numPages):
         
         current_png_ref = 'page%02i_line%03i.png' % (currentPage, currentLine)
 
-        # Save copies of all images in /docs for the webpage to use
+        # Copy images into /docs for the webpage to use
         hieratic_src = '../hieratic_lines/page%02i/%s' % (currentPage, current_png_ref)
         hieroglyphic_src = '../png_lines/%s' % current_png_ref
-        # Go to the next page if we've run out of images
-        if not os.path.exists(hieratic_src) or not os.path.exists(hieroglyphic_src):
+        have_hieratic = os.path.exists(hieratic_src)
+        have_hieroglyphic = os.path.exists(hieroglyphic_src)
+        if not have_hieratic or not have_hieroglyphic:
+            # Go to the next page if we've run out of images
             break
         hieratic_dst = '../docs/images/hieratic_%s' % current_png_ref
         shutil.copyfile(hieratic_src, hieratic_dst)
@@ -73,10 +83,8 @@ for i in range(numPages):
         maybe_flip = 'class="flip" ' if should_flip else ''
 
         html += '\n\n'
-        html += '\n    <div class="line">'
-        html += '\n    <a id="page%02i_line%03i">' % (currentPage, currentLine)
+        html += '\n    <div class="line" id="page%02i_line%03i">' % (currentPage, currentLine)
         html += '\n      <h3 class="line-number">Page %i, Line %i</h3>' % (currentPage, currentLine)
-        html += '\n    </a>'
         html += '\n      <div class="hieratic">'
         html += '\n        <img src="./images/hieratic_%s" />' % current_png_ref
         html += '\n      </div>'
@@ -84,10 +92,49 @@ for i in range(numPages):
         html += '\n        <img src="./images/hieroglyphic_%s" width="%ipx" %s/>' % (current_png_ref, width, maybe_flip)
         html += '\n      </div>'
         html += '\n    </div>'
+    # close page div
+    html += '\n    </div>'
 
 
+# Build a navigation header for faster access than scrolling.
+nav = """<div class="navbar">
+    <button class="flip big"
+        aria-role="open and close navigation menu"
+      >𓊛</button>
+    <nav class="hidden">
+      <ol>
+"""
+for i in range(numPages):
+    currentPage = i + 1
+    nav += ' ' * 8
+    nav += '<li><a href="#page%02d">Page %d</a></li>\n' % (currentPage, currentPage)
+nav += """      </ol>
+    </nav>
+    </div>
+"""
 
-html = HTML_HEADER + html + HTML_FOOTER
+script = """
+<script>
+document.addEventListener('DOMContentLoaded', (e) => {
+  navbutton = document.querySelector('button');
+  navbutton.addEventListener('mousedown', (click) => {
+    toggle_nav();
+  });
+});
+
+function toggle_nav() {
+  nav = document.querySelector('nav');
+  if (nav.classList.contains('hidden')) {
+      nav.classList.remove('hidden');
+  } else {
+      nav.classList.add('hidden');
+  }
+}
+</script>
+"""
+
+html = HTML_HEADER + nav + HTML_MAIN + html + HTML_FOOTER + script
+
 f = open('../docs/hr-st.html', 'w')
 f.write(html)
 f.close()

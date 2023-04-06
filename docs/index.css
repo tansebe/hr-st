@@ -1,23 +1,58 @@
 
+/* quick-link panel for navigation */
+.navbar {
+  top: 0;
+  right: 0;
+  position: fixed;
+  margin: 0em;
+  z-index: 1;
+}
+
+nav {
+  transition: translate 0.3s;
+  background: white;
+  border-left: 1px solid;
+  padding: 0 8px;
+}
+
+nav.hidden {
+  translate: 5em;
+}
+
+.big {
+  font-size: 200%;
+}
+
+/* Pages have an order, but remove the redundant automatic numbering. */
+nav ol {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0.5em;
+}
+
+nav li:hover {
+  background: lightgray;
+}
+
+nav a {
+  text-decoration: none;
+}
+
 .container {
-  width: 2000px;
-  /* margin: 0 auto; */
+  width: 3020px;
   padding: 0 20px;
   border: 0px solid red;
+  /* Place block elements and text aligned on the right */
+  text-align: right;
+  direction: rtl;
 }
 
-.line-number, .page-number {
-  text-align: right;
+.info, .page-number {
+  margin: 0 5em;
+}
+
+.line, .page {
   margin-top: 50px;
-}
-
-.line {
-  -webkit-transform: scale(0.75);
-  transform: scale(0.75);
-}
-
-.hieratic, .hieroglyphic {
-  text-align: right;
 }
 
 img.flip {
