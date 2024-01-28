@@ -1,5 +1,9 @@
 .DS_Store
 code/env
+code/mdc2png
+docs/hr-st.html
+docs/images
 mdc_lines
+png_lines
 Icon?
 ![Ii]con[_a-zA_Z0-9-]
