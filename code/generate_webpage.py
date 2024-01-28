@@ -53,6 +53,9 @@ for i in range(numPages):
     lineList = sorted(glob.glob('../hieratic_lines/page%02i/*.png' % currentPage))
     numLines = len(lineList)
     
+    # Create the output image directory, if necessary
+    os.makedirs('../docs/images', mode=0o755, exist_ok=True)
+
     for j in range(numLines):
         currentLine = j+1 # Easy life
         

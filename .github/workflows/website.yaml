@@ -1,0 +1,50 @@
+name: Render website
+
+concurrency:
+  group: "pages"
+  # Allow one deployment at a time
+  cancel-in-progress: true
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - render
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install python image support
+        run: sudo apt-get install python3-pil
+      - name: Fetch mdc2png
+        run: |
+          curl -O https://thaumas.net/~giles/2024/mdc2png-7.6.0_20220911.tar.gz
+          tar xvf mdc2png-7.6.0_20220911.tar.gz
+          mv mdc2png-7.6.0_20220911 code/mdc2png
+      - name: Render website
+        run: |
+          cd code && /bin/sh render.sh
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: render
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment source
+    # Target github-pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
