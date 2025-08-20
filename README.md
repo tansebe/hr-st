@@ -18,6 +18,8 @@ probably in Thebes. Images are [CC BY-NC 4.0](http://creativecommons.org/license
 - Enzo Chuirco [transcription and transliteration](http://www.enzochiurco.it/HS%20gero%20+%20t%20+%20t.htm) retrieved 2021 October 17.
   (no longer available)
 
+- Alberto Elli [La Disputa tra Horus e Seth](https://www.mediterraneoantico.it/magazine-online-archeologia/SpecialeMA_Numero11_2017/testi-letteratura-neo-egizia.html#102) *Testi di Letteratura Neo-Egizia* Mediterraneo Antico Speciale 2017, pp. 95-155.
+
 - Simpson "The Contendings of Horus and Seth" in *The Literature of Ancient Egypt* 2003, pp. 91-103.
   (translation)
 
