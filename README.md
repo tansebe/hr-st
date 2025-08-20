@@ -7,6 +7,8 @@ the [ⲧⲁⲛⲥⲏⲃⲉ ⲛ̄ⲧⲙⲛ̄ⲧⲛⲣⲙ̄ⲛ̄ⲕⲏⲙⲉ](http
 ![Chester Beatty Papyrus image](https://viewer.cbl.ie/viewer/api/v1/records/Pap_1_1/files/images/D0003317.jpg/2314,1293,1017,224/max/0/default.jpg)
 ![N41:z-Xrd-m-D53-nb:r-Dr:r-G7](hr-st-sample.svg)
 
+Recordings of our reading group are [available](https://www.youtube.com/watch?v=Tk499R7rEd4&list=PLdoIdOGz7R2KygCReuuBN8_QJ5tDZpiba) as well.
+
 ## Academic Sources
 
 The source for this is [Papyrus Chester Beatty I](https://viewer.cbl.ie/viewer/image/Pap_1_1/1/) written during the New Kingdom period around 1160 BCE,
