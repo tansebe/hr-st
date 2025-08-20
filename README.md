@@ -25,7 +25,12 @@ probably in Thebes. Images are [CC BY-NC 4.0](http://creativecommons.org/license
 
 - Lichtheim *Ancient Egyptian Literature* vol. 2, 1973, 2006.
   (translation)
+
 ## Usage
+
+What follows are contribution instructions for participants.
+They may also be a useful starting point for quoting the transcription
+in publications.
 
 ### General File Generation and Editing (The Easy Stuff)
 
@@ -58,9 +63,9 @@ Seriously, go nuts.
 ### Quick Workflow 
 
 1. `python code/split_mdc_lines.py`
-1.  `../jsesh_sample` -> make images (follow instructions in that readme) -> copy images to `hr-st`
-1. `code/generate_webpage`
-1. upload changes
+2.  `../jsesh_sample` -> make images (follow instructions in that readme) -> copy images to `hr-st`
+3. `code/generate_webpage`
+4. upload changes
 
 
 ### Detailed Process
